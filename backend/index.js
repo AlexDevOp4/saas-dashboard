@@ -5,6 +5,7 @@ import connectDB from "./config/database.js";
 
 import UserRoutes from "./routes/userRoutes.js";
 import AuthRoutes from "./routes/authRoutes.js";
+import TaskRoutes from "./routes/taskRoutes.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 // Routes
 app.use("/api/users", UserRoutes);
 app.use("/api/auth", AuthRoutes);
+app.use("/api/tasks", TaskRoutes);
 
 // Start the server after DB connection is established
 const PORT = process.env.PORT || 8080;
